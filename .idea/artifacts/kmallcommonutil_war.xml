@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kmallcommonutil:war">
+    <output-path>$PROJECT_DIR$/kmallcommonutil/target</output-path>
+    <root id="archive" name="kmall-common-util.war">
+      <element id="artifact" artifact-name="kmallcommonutil:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -17,7 +17,8 @@ class KmallUserServiceApplicationTests {
 	@Test
 	void contextLoads() {
         List<Member> members = memberService.selectAll();
-        System.out.println(members.toString());
+        for (Member member : members) {
+            System.out.println(member.toString());
+        }
     }
-
 }

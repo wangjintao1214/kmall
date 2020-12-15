@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kmallparent:war">
+    <output-path>$PROJECT_DIR$/kmallparent/target</output-path>
+    <root id="archive" name="kmall-parent.war">
+      <element id="artifact" artifact-name="kmallparent:war exploded" />
+    </root>
+  </artifact>
+</component>

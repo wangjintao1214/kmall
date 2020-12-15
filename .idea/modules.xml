@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kmall-user-service/kmall-user-service.iml" filepath="$PROJECT_DIR$/kmall-user-service/kmall-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmall-user-web/kmall-user-web.iml" filepath="$PROJECT_DIR$/kmall-user-web/kmall-user-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmallapi/kmallapi.iml" filepath="$PROJECT_DIR$/kmallapi/kmallapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmallcommonutil/kmallcommonutil.iml" filepath="$PROJECT_DIR$/kmallcommonutil/kmallcommonutil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmallparent/kmallparent.iml" filepath="$PROJECT_DIR$/kmallparent/kmallparent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmallserviceutil/kmallserviceutil.iml" filepath="$PROJECT_DIR$/kmallserviceutil/kmallserviceutil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmallwebutil/kmallwebutil.iml" filepath="$PROJECT_DIR$/kmallwebutil/kmallwebutil.iml" />
+    </modules>
+  </component>
+</project>

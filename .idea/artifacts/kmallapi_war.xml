@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kmallapi:war">
+    <output-path>$PROJECT_DIR$/kmallapi/target</output-path>
+    <root id="archive" name="kmall-api.war">
+      <element id="artifact" artifact-name="kmallapi:war exploded" />
+    </root>
+  </artifact>
+</component>
