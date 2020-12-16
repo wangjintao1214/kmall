@@ -32,4 +32,13 @@ public class PmsBaseCatalog2 implements Serializable{
     public void setCatalog1Id(Integer catalog1Id) {
         this.catalog1Id = catalog1Id;
     }
+
+    @Override
+    public String toString() {
+        return "PmsBaseCatalog2{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", catalog1Id=" + catalog1Id +
+                '}';
+    }
 }
