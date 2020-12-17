@@ -11,6 +11,7 @@ public class PmsBaseAttrValue implements Serializable{
 
     private String isEnabled;
 
+
     public Long getId() {
         return id;
     }
