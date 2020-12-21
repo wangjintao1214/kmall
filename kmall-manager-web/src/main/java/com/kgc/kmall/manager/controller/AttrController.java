@@ -5,6 +5,7 @@ import com.kgc.kmall.bean.PmsBaseAttrValue;
 import com.kgc.kmall.service.AttrService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -42,5 +43,6 @@ public class AttrController {
         }
         return pmsBaseAttrValues;
     }
+
 }
 

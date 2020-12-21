@@ -13,4 +13,6 @@ public interface AttrService {
     List<PmsBaseAttrInfo> selectAll(Integer catalog3Id);
     Integer add(PmsBaseAttrInfo pmsBaseAttrInfo);
     List<PmsBaseAttrValue> seleByattrId(Long attrId);
+
+
 }
