@@ -8,5 +8,4 @@ public class KmallManagerWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KmallManagerWebApplication.class, args);
 	}
-
 }
