@@ -4,10 +4,17 @@ import com.kgc.kmall.bean.PmsBaseCatalog1;
 import com.kgc.kmall.bean.PmsBaseCatalog2;
 import com.kgc.kmall.bean.PmsBaseCatalog3;
 import com.kgc.kmall.service.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
@@ -17,11 +24,13 @@ import java.util.List;
  */
 @CrossOrigin
 @RestController
+@Api(tags = "级别分类相关接口",description = "提供级别分类相关的Rest API")
 public class CatalogController {
+
     @Reference
     CatalogService catalogService;
-
-    @RequestMapping("/getCatalog1")
+    @ApiOperation("一级分类接口")
+    @PostMapping("/getCatalog1")
     public List<PmsBaseCatalog1> getCatalog1(){
         List<PmsBaseCatalog1> pmsBaseCatalog1s = catalogService.selectAll();
         for (PmsBaseCatalog1 pmsBaseCatalog1 : pmsBaseCatalog1s) {
@@ -29,7 +38,9 @@ public class CatalogController {
         }
         return pmsBaseCatalog1s;
     }
-    @RequestMapping("/getCatalog2")
+    @ApiOperation("二级分类接口")
+    @PostMapping("/getCatalog2")
+    @ApiImplicitParam(name="catalog1Id",value = "一级分类id",required = true)
     public List<PmsBaseCatalog2> getCatalog2(Integer catalog1Id){
         List<PmsBaseCatalog2> pmsBaseCatalog2s = catalogService.selectAllBycatalog1Id(catalog1Id);
         for (PmsBaseCatalog2 pmsBaseCatalog2 : pmsBaseCatalog2s) {
@@ -37,7 +48,9 @@ public class CatalogController {
         }
         return pmsBaseCatalog2s;
     }
-    @RequestMapping("/getCatalog3")
+    @ApiOperation("三级分类接口")
+    @ApiImplicitParam(name = "catalog2Id",value = "二级分类id",required = true)
+    @PostMapping("/getCatalog3")
     public List<PmsBaseCatalog3> getCatalog3(Integer catalog2Id){
         List<PmsBaseCatalog3> pmsBaseCatalog3s = catalogService.selectAllBycatalog2Id(catalog2Id);
         for (PmsBaseCatalog3 pmsBaseCatalog3 : pmsBaseCatalog3s) {
