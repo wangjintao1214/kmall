@@ -14,6 +14,16 @@ public class PmsProductSaleAttrValue implements Serializable{
     private Long saleAttrId;
     @ApiModelProperty("销售属性值名称")
     private String saleAttrValueName;
+    @ApiModelProperty("isChecked")
+    private Long isChecked;
+
+    public Long getIsChecked() {
+        return isChecked;
+    }
+
+    public void setIsChecked(Long isChecked) {
+        this.isChecked = isChecked;
+    }
 
     public Long getId() {
         return id;

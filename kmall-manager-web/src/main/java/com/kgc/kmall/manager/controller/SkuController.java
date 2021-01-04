@@ -21,7 +21,7 @@ public class SkuController {
     @Reference
     SkuService skuService;
     @ApiOperation("保存sku相关属性接口")
-    @PostMapping("/saveSkuInfo")
+    @PostMapping(value = "/saveSkuInfo")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",value = "库存id(itemID)",required = false),
             @ApiImplicitParam(name = "spuId",value = "商品id",required = true),
@@ -36,9 +36,10 @@ public class SkuController {
             @ApiImplicitParam(name = "skuAttrValueList",value = "sku平台属性",required = true),
             @ApiImplicitParam(name = "skuSaleAttrValueList",value = "销售属性",required = true),
     })
-    public String saveSkuInfo(@RequestBody PmsSkuInfo skuInfo){
-        String result  = skuService.saveSkuInfo(skuInfo);
-        return result ;
+    public String saveSkuInfo(@RequestBody PmsSkuInfo skuInfo) {
+        String result = skuService.saveSkuInfo(skuInfo);
+        return result;
     }
+
 
 }

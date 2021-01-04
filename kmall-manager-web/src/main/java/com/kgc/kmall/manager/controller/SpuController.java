@@ -85,7 +85,7 @@ public class SpuController {
         return saleAttrList;
     }
     @ApiOperation("保存商品接口")
-    @GetMapping("/saveSpuInfo")
+    @PostMapping("/saveSpuInfo")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",value = "商品id",required = false),
             @ApiImplicitParam(name = "spuName",value = "商品名称",required = true),

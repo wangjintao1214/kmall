@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface PmsProductSaleAttrMapper {
+public interface  PmsProductSaleAttrMapper {
     int countByExample(PmsProductSaleAttrExample example);
 
     int deleteByExample(PmsProductSaleAttrExample example);
@@ -28,4 +28,8 @@ public interface PmsProductSaleAttrMapper {
     int updateByPrimaryKeySelective(PmsProductSaleAttr record);
 
     int updateByPrimaryKey(PmsProductSaleAttr record);
+
+    //添加了isChecked属性
+    List<PmsProductSaleAttr> spuSaleAttrListIsCheck(@Param("spuId") Long spuId,@Param("skuId") Long skuId);
+
 }
